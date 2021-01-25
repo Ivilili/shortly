@@ -9,6 +9,46 @@ $neutral-grayish-violet: hsl(257, 7%, 63%);
 $neutral-blue: hsl(255, 11%, 22%);
 $neutral-violet: hsl(260, 8%, 14%);
 
+@font-face {
+	font-family: 'icomoon';
+	src: url('../icomoon/fonts/icomoon.eot?n4jln0');
+	src: url('../icomoon/fonts/icomoon.eot?n4jln0#iefix') format('embedded-opentype'),
+		url('../icomoon/fonts/icomoon.ttf?n4jln0') format('truetype'),
+		url('../icomoon/fonts/icomoon.woff?n4jln0') format('woff'),
+		url('../icomoon/fonts/icomoon.svg?n4jln0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+	content: "\ea91";
+}
+.icon-instagram:before {
+	content: "\ea92";
+}
+.icon-twitter:before {
+	content: "\ea96";
+}
+.icon-pinterest:before {
+	content: "\ead1";
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -26,6 +66,7 @@ li {
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 h1 {
@@ -33,28 +74,9 @@ h1 {
 }
 p {
 	color: $neutral-grayish-violet;
+	font-weight: 400;
 }
 
-.icon-facebook2:before {
-	content: "\ea91";
-}
-.icon-twitter:before {
-	content: "\ea96";
-}
-.icon-pinterest:before {
-	content: "\ead1";
-}
-
-.icon-instagram:before {
-	content: "\ea92";
-}
-
-.container {
-	max-width: 1440px;
-	margin: 1rem 2rem;
-}
-
-.header,
 .footer {
 	display: flex;
 	justify-content: space-between;
@@ -63,10 +85,19 @@ p {
 .footer {
 	color: #ffffff;
 	background-color: $neutral-violet;
-}
+	padding: 2rem 4rem;
 
-.features-section {
-	background-color: $neutral-grayish-violet;
+	.icons {
+		display: flex;
+		& .icon {
+			margin-right: 12px;
+			font-size: 20px;
+		}
+	}
+
+	.footer_logo {
+		filter: brightness(0) invert(1);
+	}
 }
 
 .pricing-section {
@@ -75,15 +106,21 @@ p {
 	background-image: url('../assets/images/bg-boost-desktop.svg');
 	background-color: $primary-color-dark-violet;
 	color: #ffffff;
+}
 
-	& .pricing-section_btn {
-		background-color: $primary-color-cyan;
+.cta_btn {
+	background-color: $primary-color-cyan;
+	color: #ffffff;
+	font-weight: 700;
+	height: 58px;
+	border-radius: 44px;
+	font-size: 1.2rem;
+	margin-top: 1rem;
+	padding: 0 30px;
+	outline: none;
+	border: none;
+	&:hover {
 		color: #ffffff;
-		font-weight: 700;
-		height: 58px;
-		border-radius: 44px;
-		font-size: 1.2rem;
-		margin-top: 1rem;
-		padding: 0 30px;
+		background: lighten($primary-color-cyan, 10%);
 	}
 }

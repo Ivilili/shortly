@@ -1,0 +1,55 @@
+.main {
+	padding: 3.5rem 4rem;
+	margin-bottom: 6rem;
+	overflow: hidden;
+
+	& .main_working-img {
+		float: right;
+		margin-right: -18%;
+		margin-top: -5%;
+	}
+}
+
+.features-section {
+	background: #eff1f7;
+	padding: 3.5rem 4rem;
+
+	& h2,
+	p {
+		text-align: center;
+	}
+}
+
+.cards {
+	display: flex;
+	justify-content: center;
+	margin: 2rem auto;
+}
+
+.card {
+	background-color: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	width: 300px;
+	padding: 2rem 1rem;
+	margin: 0.5rem;
+
+	& .card__img {
+		background-color: $neutral-violet;
+		margin-top: -3.5rem;
+		padding: 0.8rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+	}
+}
+
+form {
+	padding: 2rem 1rem;
+	background-image: url('../assets/images/bg-boost-desktop.svg');
+	background-color: $primary-color-dark-violet;
+	border-radius: 12px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: -5rem;
+}

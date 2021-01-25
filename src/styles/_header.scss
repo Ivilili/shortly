@@ -1,0 +1,43 @@
+.header {
+	display: flex;
+	padding: 2rem 4rem 0;
+	margin-bottom: 1rem;
+
+	& a {
+		color: $neutral-grayish-violet;
+		&:hover {
+			color: $neutral-violet;
+		}
+	}
+}
+
+.nav {
+	margin-left: 24px;
+
+	& a {
+		margin-right: 12px;
+		font-size: 14px;
+	}
+}
+
+.login-wrapper {
+	margin-left: auto;
+	font-size: 14px;
+
+	& .login-wrapper_login {
+		margin-right: 24px;
+	}
+
+	& .login-wrapper_sign-up {
+		background-color: $primary-color-cyan;
+		color: #ffffff;
+		font-weight: normal;
+		border-radius: 44px;
+		padding: 10px 24px;
+		transition: all 0.5s ease;
+		&:hover {
+			color: #ffffff;
+			background: lighten($primary-color-cyan, 10%);
+		}
+	}
+}
