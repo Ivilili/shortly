@@ -1,12 +1,13 @@
 .main {
-	padding: 3.5rem 4rem;
-	margin-bottom: 6rem;
-	overflow: hidden;
+	padding-left: 23px;
 
-	& .main_working-img {
-		float: right;
-		margin-right: -18%;
-		margin-top: -5%;
+	&__img {
+		width: 100%;
+		min-height: 338px;
+		background-image: url('../assets/images/illustration-working.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center left;
 	}
 }
 

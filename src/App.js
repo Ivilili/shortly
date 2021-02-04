@@ -1,19 +1,25 @@
+import React, {useState} from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.scss';
-import personWorking from './assets/images/illustration-working.svg';
 import brandRecognitionIcon from './assets/images/icon-brand-recognition.svg';
 import customizableIcon from './assets/images/icon-fully-customizable.svg';
 import recordsIcon from './assets/images/icon-detailed-records.svg';
 
 function App() {
+	const [toggle, setToggle] = useState('closed');
+
+	const toggleMenu = (e) => {
+		e.preventDefault();
+		setToggle(toggle === 'closed' ? 'open' : 'closed');
+		console.log('toggled')
+	}
+
 	return (
 		<>
-			<Header />
+			<Header toggle={toggle} onToggleMenu={toggleMenu} />
 			<section className="main">
-				<div className="main__img-wrap">
-				<img src={personWorking} className="main_working-img" alt="person working" />
-				</div>
+				<div className="main__img"></div>
 				<h1 className="main_title">More than just shorter links</h1>
 				<p className="main_txt">
 					Build your brand’s recognition and get detailed insights on how your links are performing.
