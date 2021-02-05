@@ -4,7 +4,7 @@ const Header = ({toggle, onToggleMenu}) => {
 
 	return (
 		<header className={`header ${toggle}`}>
-			<div className="header__wrapper">	
+			<div className="header__wrapper container">	
 				<a href="/" className="header__logo">
 					<img src={logo} alt="shortly logo" />
 				</a>
