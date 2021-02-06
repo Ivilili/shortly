@@ -1,0 +1,30 @@
+.pricing {
+	text-align: center;
+	padding: 100px 36px 88px;
+	background-image: url('../assets/images/bg-boost-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-color: $primary-color-dark-violet;
+	color: #ffffff;
+
+    @include breakpoint-up(large){
+        padding: 64px 36px 56px; 
+    }
+
+    &__title {
+        font-size: 26px;
+        margin-bottom: 27px;
+        margin-top: 0;
+
+        @include breakpoint-up(large){
+            font-size: 34px;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    &__cta {
+        margin-top: 0;
+
+    }
+}

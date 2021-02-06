@@ -10,6 +10,7 @@ $neutral-gray: hsl(0, 0%, 75%);
 $neutral-grayish-violet: hsl(257, 7%, 63%);
 $neutral-blue: hsl(255, 11%, 22%);
 $neutral-violet: hsl(260, 8%, 14%);
+$features-bg: #eff1f7;
 $white: #ffffff;
 
 //font sizes
@@ -102,15 +103,20 @@ input:focus {
 	margin: auto;
 }
 
-.footer {
-	display: flex;
-	justify-content: space-between;
-}
+//.footer {
+//	display: flex;
+//	justify-content: space-between;
+//}
 
 .footer {
 	color: #ffffff;
 	background-color: $neutral-violet;
 	padding: 3rem 4rem;
+	text-align: center;
+
+	ul {
+		padding-left: 0;
+	}
 
 	.footer__logo {
 		filter: brightness(0) invert(1);
@@ -127,6 +133,7 @@ input:focus {
 
 .footer__icons {
 	display: flex;
+	justify-content: center;
 	& .footer__icon {
 		margin-right: 16px;
 		font-size: 24px;
@@ -145,14 +152,6 @@ input:focus {
 	margin-right: 0;
 }
 
-.pricing-section {
-	text-align: center;
-	padding: 4rem;
-	background-image: url('../assets/images/bg-boost-desktop.svg');
-	background-color: $primary-color-dark-violet;
-	color: #ffffff;
-}
-
 .btn {
 	background-color: $primary-color-cyan;
 	color: $white;
@@ -163,6 +162,7 @@ input:focus {
 	padding: 1.0625rem 2.875rem;
 	outline: none;
 	border: none;
+	cursor: pointer;
 	&:hover {
 		color: $white;
 		background: lighten($primary-color-cyan, 10%);
