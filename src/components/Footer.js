@@ -2,9 +2,9 @@ import logo from '../assets/images/logo.svg';
 
 const Footer = () => {
 	return (
-		<footer className="footer">
+		<footer id="resources" className="footer">
 			<div className="footer__container container">
-			<a href="/" className="footer__logo">
+			<a href="#top" className="footer__logo">
 				<img src={logo} alt="shortly logo" />
 			</a>
 			<ul className="footer__links">

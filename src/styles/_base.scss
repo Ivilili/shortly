@@ -61,6 +61,7 @@ $font-xlg: 3.25rem; //52px
 html {
     font-size: 100%;
     box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -115,8 +116,9 @@ input:focus {
 	outline: none;
 	border: none;
 	cursor: pointer;
+	transition: all 0.5s ease-in-out;
 	&:hover {
 		color: $white;
-		background: lighten($primary-color-cyan, 10%);
+		background: lighten($primary-color-cyan, 15%);
 	}
 }
