@@ -13,7 +13,7 @@
             padding-left: 0;
         }
     }
-
+    
     &__title {
         padding-top: 10.75rem;
         font-size: 1.8125rem;
@@ -21,7 +21,7 @@
         margin-top: 0;
 
         @include breakpoint-up(large){
-            font-size: 2rem;
+            font-size: 3rem;
         }
     }
 

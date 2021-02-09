@@ -1,6 +1,7 @@
 .main {
     position: relative;
     min-height: 52.1875rem;
+    z-index: -1;
 
     @include breakpoint-up(medium){
         display: flex;
@@ -96,82 +97,6 @@
     &__cta {
         margin-bottom: 5.375rem;
         margin-top: 0;
-    }
-
-    &__form {
-        position: absolute;
-		left: 50%;
-        transform: translateX(-50%);
-        bottom: -12%;
-        padding: 1.4375rem;
-        width: 88%;
-        background-image: url('../assets/images/bg-shorten-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: $primary-color-dark-violet;
-        border-radius: 0.75rem;
-        outline: none;
-
-        @include breakpoint-up(medium){
-            background-image: url('../assets/images/bg-shorten-desktop.svg');
-            display: flex;
-            width: 96%;
-            padding: 1.875rem 2.5rem;
-            bottom: -8%;
-        }
-
-        @include breakpoint-up(large){
-            padding: 3.125rem 4rem;
-            bottom: -12%;
-            width: 100%;
-        }
-
-        input, .form__cta {
-            width: 100%;
-            border-radius: 0.25rem;
-            height: 3rem;
-
-            @include breakpoint-up(large){
-               height: 3.875rem;
-               border-radius: 0.625rem;
-            }
-        }
-
-        input {
-            border: none;
-            padding-left: 1rem;
-            margin-bottom: 0.875rem;
-            color: $neutral-grayish-violet;
-            font-size: $font-sm;
-
-            @include breakpoint-up(medium){
-                margin-bottom: 0;
-                margin-right: 1.375rem;
-            }
-
-            @include breakpoint-up(large){
-                font-size: inherit;
-            }
-
-            &::placeholder {
-                font-family: $font-stack;
-                font-size: $font-sm;
-                color: $neutral-grayish-violet;
-
-                @include breakpoint-up(large){
-                   font-size: $font-med;
-                }
-            }
-        }
-
-        .form__cta {
-            padding: 0;
-            margin-top: 0;
-
-            @include breakpoint-up(medium){
-                width: 11.75rem;
-             }
-        }
     }
 }
 

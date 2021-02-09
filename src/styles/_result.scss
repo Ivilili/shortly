@@ -1,0 +1,170 @@
+.result {
+    background-color: $features-bg;
+
+    &__container {
+        padding-right: 1.4375rem;
+        padding-left: 1.4375rem;
+        border: 1px solid transparent;
+
+        @include breakpoint-up(large){
+            padding: 0;
+        }
+    }
+
+    &__form {
+        padding: 1.4375rem;
+        border: 1px solid transparent;
+        margin-top: -4.6rem;
+        margin-bottom: 1.375rem;
+        display: block;
+        background-image: url('../assets/images/bg-shorten-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $primary-color-dark-violet;
+        border-radius: 0.75rem;
+        outline: none;
+        width: 100%;
+
+        @include breakpoint-up(medium){
+            background-image: url('../assets/images/bg-shorten-desktop.svg');
+            display: flex;
+            padding: 1.875rem 2.5rem;
+            margin-top: -3.6rem;
+        }
+
+        @include breakpoint-up(large){
+            padding: 3.125rem 4rem;
+            margin-top: -5rem;
+        }
+
+        input, .result__cta {
+            width: 100%;
+            border-radius: 0.25rem;
+            height: 3rem;
+
+            @include breakpoint-up(large){
+               height: 3.875rem;
+               border-radius: 0.625rem;
+            }
+        }
+
+        input {
+            border: none;
+            padding-left: 1rem;
+            margin-bottom: 0.875rem;
+            color: $neutral-grayish-violet;
+            font-size: $font-med;
+
+            @include breakpoint-up(medium){
+                margin-bottom: 0;
+                margin-right: 1.375rem;
+            }
+
+            @include breakpoint-up(large){
+                font-size: inherit;
+            }
+
+            &::placeholder {
+                font-family: $font-stack;
+                font-size: $font-med;
+                color: $neutral-grayish-violet;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .result__cta {
+            padding: 0;
+            margin-top: 0;
+    
+            @include breakpoint-up(medium){
+                width: 11.75rem;
+             }
+        }
+    }
+
+    &__item {
+        background-color: $white;
+        border-radius: 8px;
+        padding: 15px 0;
+        text-align: center;
+        margin-bottom: 23px;
+
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 26px;
+            padding-right: 24px;
+           
+        }
+    }
+
+    &__original, &__short {
+        text-align: left;
+        font-size: 16px;
+        padding-bottom: 14px;
+        padding-right: 16px;
+        padding-left: 16px;
+
+        @include breakpoint-up(large){
+            padding: 0;
+            font-size: 18px;
+        }
+    }
+
+    &__original {
+        color: $neutral-blue; 
+        position: relative;
+
+        @include breakpoint-up(large){
+            flex: 2;
+        }
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            background-color: $neutral-gray;
+
+            @include breakpoint-up(large){
+                display: none;
+            }
+        }
+    }
+
+    &__short {
+        color: $primary-color-cyan;
+        padding-top: 15px;
+
+        @include breakpoint-up(large){
+            padding: 0;
+            padding-right: 20px;
+        }
+    }
+
+    &__btn {
+        width: 94%;
+        border-radius: 6px;
+        height: 40px;
+        padding: 0;
+        font-size: 14px;
+        margin: 0 auto;
+
+        @include breakpoint-up(medium){
+            width: 97%;
+        }
+
+        @include breakpoint-up(large){
+            height: 40px;
+            width: 104px;
+            margin: 0;
+        }
+    }
+}
