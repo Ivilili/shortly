@@ -10,10 +10,10 @@ import './App.scss';
 function App() {
 	const [toggle, setToggle] = useState('closed');
 	const [value, setValue] = useState('');
-	const [data, setData] = useState([]);
+	const [data, setData] = useState(JSON.parse(localStorage.getItem('data')) || []);
 	const [error, setError] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
-	
+
 
 	const handleChange = (e) => {
 		setValue(e.target.value);
@@ -31,13 +31,14 @@ function App() {
 		.then(res => res.json())
 		.then(res => {
 			setIsLoading(false);
-			setData([
+			let myData = [
 				...data,
 				{ original: value,
 				short: res.result.full_short_link
 			},
-		])
-		   //localStorage.setItem('data', data);
+		]
+		    setData(myData)
+		    localStorage.setItem('data', JSON.stringify(myData));
 		    setValue("");
 		})
 		.catch(err => {
