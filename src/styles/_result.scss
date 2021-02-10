@@ -12,6 +12,7 @@
     }
 
     &__form {
+        position: relative;
         padding: 1.4375rem;
         border: 1px solid transparent;
         margin-top: -4.6rem;
@@ -51,7 +52,6 @@
         input {
             border: none;
             padding-left: 1rem;
-            margin-bottom: 0.875rem;
             color: $neutral-grayish-violet;
             font-size: $font-med;
 
@@ -77,10 +77,11 @@
 
         .result__cta {
             padding: 0;
-            margin-top: 0;
+            margin-top: 0.875rem;
     
             @include breakpoint-up(medium){
                 width: 11.75rem;
+                margin-top: 0;
              }
         }
     }
@@ -91,6 +92,7 @@
         padding: 15px 0;
         text-align: center;
         margin-bottom: 23px;
+        overflow: hidden;
 
         @include breakpoint-up(large){
             display: flex;
@@ -142,6 +144,7 @@
     &__short {
         color: $primary-color-cyan;
         padding-top: 15px;
+        border: none;
 
         @include breakpoint-up(large){
             padding: 0;
@@ -167,4 +170,61 @@
             margin: 0;
         }
     }
+
+    .input-error {
+        border: 3px solid $secondary-color-red;
+
+        &::placeholder {
+            color: $secondary-color-red;
+        }
+    }
+}
+
+.loader {
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+
+	&:after {
+		content: " ";
+		display: block;
+		width: 64px;
+		height: 64px;
+		margin: 8px;
+		border-radius: 50%;
+		border: 6px solid $primary-color-cyan;
+		border-color: $primary-color-cyan transparent $primary-color-cyan transparent;
+		animation: loader 1.2s linear infinite;
+		transition: all 0.5s ease;
+	}
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.error {
+    color: $secondary-color-red;
+    font-style: italic;
+    font-size: 14px;
+
+    @include breakpoint-up(medium){
+        position: absolute;
+        top: 79px;
+        right: 0;
+        left: 40px;
+        bottom: 0;
+    }
+
+    @include breakpoint-up(large){
+        top: 111px;
+        right: 0;
+        left: 66px;
+        bottom: 0;
+    }    
 }

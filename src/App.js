@@ -11,6 +11,8 @@ function App() {
 	const [toggle, setToggle] = useState('closed');
 	const [value, setValue] = useState('');
 	const [data, setData] = useState([]);
+	const [error, setError] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 	
 
 	const handleChange = (e) => {
@@ -20,21 +22,27 @@ function App() {
 	 const handleSubmit = (e) => {
 		e.preventDefault();
 
-		console.log('url submited!')
+		(value === "") ? setError(true) : setError(false);
+		setIsLoading(true);
 
 		fetch(`https://api.shrtco.de/v2/shorten?url=${value}`, {
 			responseType: "json",
 		})
 		.then(res => res.json())
 		.then(res => {
+			setIsLoading(false);
 			setData([
 				...data,
 				{ original: value,
 				short: res.result.full_short_link
 			},
 		])
+		   //localStorage.setItem('data', data);
+		    setValue("");
 		})
-		.catch(err => console.log(err));
+		.catch(err => {
+			console.log(err)
+		setIsLoading(false);});
 	  }
 	
 
@@ -48,7 +56,7 @@ function App() {
 		<>
 			<Header toggle={toggle} onToggleMenu={toggleMenu}/>
 			<Main />
-			<Result data={data} value={value} onChange={handleChange} onSubmit={handleSubmit}/>
+			<Result data={data} value={value} onChange={handleChange} onSubmit={handleSubmit} isLoading={isLoading} error={error}/>
 			<Features />
 			<Pricing/>
 			<Footer/>
