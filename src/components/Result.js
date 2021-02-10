@@ -13,7 +13,7 @@ const Result = ({data, value, isLoading, error, onSubmit, onChange}) => {
            return (
                <div className="result__item" key={index}>
                    <div className="result__original">{item.original}</div>
-                   <input className="result__short" value={item.short} readOnly/>
+                   <div className="result__short">{item.short}</div>
                    <button className="btn result__btn" onClick={() =>  navigator.clipboard.writeText('Copy this text to clipboard')}>Copy</button>
                </div>
            )

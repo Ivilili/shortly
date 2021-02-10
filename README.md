@@ -1,14 +1,12 @@
-# Shortly URL shortening API
+# Shortly URL
 
-![Design preview for the Shortly URL shortening API coding challenge](./assets/design/desktop-preview.jpg)
+Shortly URL is shortening API project done with React and SASS. 
 
-## Welcome! 👋
-
-[Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
+![Design preview](https://ibb.co/ZNGwJRC)
 
 ## The challenge
 
-Challenge is to build out this landing page, integrate with the [shrtcode API](https://app.shrtco.de/) and get it looking as close to the design as possible.
+ [Frontend Mentor](https://www.frontendmentor.io) challenge is to build out this landing page, integrate with the [shrtcode API](https://app.shrtco.de/) and get it looking as close to the design as possible.
 
 Your users should be able to:
 
