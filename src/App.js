@@ -13,7 +13,7 @@ function App() {
 	const [data, setData] = useState(JSON.parse(localStorage.getItem('data')) || []);
 	const [error, setError] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
-
+	
 
 	const handleChange = (e) => {
 		setValue(e.target.value);
@@ -43,21 +43,20 @@ function App() {
 		})
 		.catch(err => {
 			console.log(err)
-		setIsLoading(false);});
+		    setIsLoading(false);});
 	  }
 	
 
 	const toggleMenu = (e) => {
 		e.preventDefault();
 		setToggle(toggle === 'closed' ? 'open' : 'closed');
-		console.log('toggled')
 	}
 
 	return (
 		<>
 			<Header toggle={toggle} onToggleMenu={toggleMenu}/>
 			<Main />
-			<Result data={data} value={value} onChange={handleChange} onSubmit={handleSubmit} isLoading={isLoading} error={error}/>
+			<Result data={data} value={value} onChange={handleChange} onSubmit={handleSubmit} isLoading={isLoading} error={error} />
 			<Features />
 			<Pricing/>
 			<Footer/>
