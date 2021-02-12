@@ -1,8 +1,6 @@
 import React, {useState, useRef} from 'react';
 
-const Item = ({item, index}) => {
-    console.log(index)
-
+const Item = ({item}) => {
     const [copySuccess, setCopySuccess] = useState(false);
 
     const shortUrlRef = useRef(null);
@@ -18,7 +16,7 @@ const Item = ({item, index}) => {
 
     return (
         <>
-      <div className="result__item" key={index}>
+      <div className="result__item" key={item.id}>
         <div className="result__original">{item.original}</div>
         <div className="result__short" ref={shortUrlRef}>{item.short}</div>
          

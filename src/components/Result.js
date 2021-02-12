@@ -12,9 +12,9 @@ const Result = ({data, value, isLoading, error, onSubmit, onChange}) => {
             )}
             <button className="btn result__cta" value="submit">Shorten It!</button>
         </form>
-        {data && data.map((item, index) => {
+        {data && data.map((item) => {
            return (
-              <Item item={item} index={index} />
+              <Item item={item} key={item.id}/>
            )
         })}
         {isLoading && <div className="loader"></div>}

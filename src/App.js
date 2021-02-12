@@ -5,12 +5,13 @@ import Result from './components/Result';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
 import Footer from './components/Footer';
+import uuid from 'react-uuid';
 import './App.scss';
 
 function App() {
 	const [toggle, setToggle] = useState('closed');
 	const [value, setValue] = useState('');
-	const [data, setData] = useState(JSON.parse(localStorage.getItem('data')) || []);
+	const [data, setData] = useState(JSON.parse(sessionStorage.getItem('data')) || []);
 	const [error, setError] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	
@@ -34,11 +35,12 @@ function App() {
 			let myData = [
 				...data,
 				{ original: value,
-				short: res.result.full_short_link
+				short: res.result.full_short_link,
+				id: uuid()
 			},
 		]
 		    setData(myData)
-		    localStorage.setItem('data', JSON.stringify(myData));
+		    sessionStorage.setItem('data', JSON.stringify(myData));
 		    setValue("");
 		})
 		.catch(err => {
