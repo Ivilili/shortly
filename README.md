@@ -2,7 +2,7 @@
 
 Shortly URL is shortening API project done with React and SASS. 
 
-![Design preview](https://ibb.co/ZNGwJRC)
+[![desktop-preview.jpg](https://i.postimg.cc/dV2304LK/desktop-preview.jpg)](https://postimg.cc/mPrBX3Yd)
 
 ## The challenge
 

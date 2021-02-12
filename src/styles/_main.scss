@@ -28,7 +28,7 @@
 
     &__img {
         width: 100%;
-		min-height: 22.125rem;
+		min-height: 25.125rem;
 		background-image: url('../assets/images/illustration-working.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -75,7 +75,8 @@
         }
 
         @include breakpoint-up(large){
-            font-size: 4.375rem;
+            font-size: 4.5rem;
+            line-height: 1.1;
         }
 
     }

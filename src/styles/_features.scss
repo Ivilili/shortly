@@ -15,13 +15,13 @@
     }
     
     &__title {
-        padding-top: 10.75rem;
+        padding-top: 5.5rem;
         font-size: 1.8125rem;
         margin-bottom: 2rem;
         margin-top: 0;
 
         @include breakpoint-up(large){
-            font-size: 3rem;
+            font-size: 2.6rem;
         }
     }
 
